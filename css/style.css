@@ -236,3 +236,19 @@ hr.rule { border: 0; border-top: 1px solid var(--gold); max-width: 80px; margin:
 .footer-nav a { display: block; color: var(--cream); text-decoration: none; margin-bottom: 0.4rem; opacity: 0.9; }
 .footer-nav a:hover { opacity: 1; text-decoration: underline; }
 .footer-base { border-top: 1px solid rgba(245,240,230,0.18); margin-top: 2.5rem; padding-top: 1.5rem; font-size: 0.9rem; opacity: 0.8; text-align: center; }
+
+/* ---------- Home atmospheric band ---------- */
+.home-band {
+  position: relative;
+  height: clamp(240px, 36vw, 430px);
+  background-image: url("../images/home-band.jpg");
+  background-size: cover;
+  background-position: center 42%;
+}
+.home-band::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to bottom, var(--cream) 0%, rgba(245,240,230,0) 20%, rgba(245,240,230,0) 80%, var(--white) 100%),
+    rgba(245,240,230,0.16);
+}
