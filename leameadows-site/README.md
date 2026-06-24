@@ -91,9 +91,14 @@ Commit it — the placeholder is replaced by your image automatically.
 Everything visual lives at the top of `css/style.css` under `:root`. Change a
 hex code there and it updates across the whole site.
 
-**Change your newsletter form**
-Every page uses your Kit form ID `fcd87c6b3b`. If you ever switch forms, search
-the files for `fcd87c6b3b` and replace it with the new ID.
+**Newsletter signup**
+Every page has a custom-styled form that posts directly into your Kit account
+(form **9603791**). It looks like the rest of the site but the email, the
+confirmation message, and any Kit automations are all handled by Kit. To change
+the wording on the button, edit the text inside `<span>Receive Lea's letters</span>`.
+If you ever rebuild the form in Kit and get a new one, search the files for
+`9603791` and `089a5491f1` and replace them with the new form's values (from
+Kit's HTML embed).
 
 ---
 

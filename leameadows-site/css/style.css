@@ -141,9 +141,28 @@ hr.rule { border: 0; border-top: 1px solid var(--gold); max-width: 80px; margin:
 }
 .signup h2 { margin-bottom: 0.2em; }
 .signup .small { font-size: 0.95rem; color: #7d766a; margin-top: 1rem; }
-/* Kit injects its own form here; this just gives breathing room */
-.kit-embed { margin: 1.25rem 0 0.5rem; min-height: 60px; }
 .signup-fallback { font-size: 0.98rem; }
+
+/* ---------- Custom-styled Kit form (posts straight into Kit) ---------- */
+.lea-form { max-width: 480px; margin: 1.25rem auto 0.4rem; text-align: left; }
+.lea-form-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.lea-input {
+  flex: 1 1 230px; font-family: var(--serif-body); font-size: 1.05rem;
+  padding: 0.72rem 0.95rem; border: 1.5px solid #d8cfbd; border-radius: 2px;
+  background: var(--white); color: var(--charcoal); line-height: 1.4;
+}
+.lea-input::placeholder { color: #9a9387; }
+.lea-input:focus { outline: none; border-color: var(--sage-dark); }
+.lea-submit { flex: 0 0 auto; cursor: pointer; }
+/* error + success messages Kit injects */
+.formkit-alert { list-style: none; margin: 0 0 0.8rem; padding: 0.6rem 0.85rem; border-radius: 2px; font-size: 0.98rem; }
+.formkit-alert:empty { display: none; }
+.formkit-alert-error { color: #b3402a; background: #fbeae5; border: 1px solid #e9b9ab; }
+.formkit-alert-success { color: var(--sage-dark); background: #eef2ea; border: 1px solid #cdd8c4; text-align: center; }
+.lea-form .formkit-spinner { display: none; }
+.formkit-powered-by-convertkit-container { margin: 0.6rem 0 0; text-align: center; }
+.formkit-powered-by-convertkit { font-size: 0.72rem; color: #9a9387; text-decoration: none; opacity: 0.65; }
+.formkit-powered-by-convertkit:hover { opacity: 1; }
 
 /* ---------- Book layout ---------- */
 .book-hero { display: grid; grid-template-columns: 300px 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
@@ -184,7 +203,7 @@ hr.rule { border: 0; border-top: 1px solid var(--gold); max-width: 80px; margin:
 .chapter-nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin: 1.5rem 0; font-size: 1.05rem; }
 .reading { max-width: 680px; margin: 0 auto; }
 .reading h2 { text-align: center; margin-top: 2.5rem; }
-.reading p:first-of-type::first-letter {
+.reading article p:first-of-type::first-letter {
   font-family: var(--serif-display); font-size: 3.2rem; line-height: 0.8;
   float: left; padding: 0.1em 0.1em 0 0; color: var(--sage-dark);
 }

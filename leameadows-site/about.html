@@ -65,11 +65,23 @@
       <div class="signup">
         <h2>Receive Lea&rsquo;s letters</h2>
         <p>New chapters, publication news, and the occasional note from the writing desk.</p>
-        <div class="kit-embed">
-          <script async data-uid="fcd87c6b3b" src="https://nickypenttila.kit.com/fcd87c6b3b/index.js"></script>
-        </div>
+        <form action="https://app.kit.com/forms/9603791/subscriptions"
+              class="seva-form formkit-form lea-form" method="post"
+              data-sv-form="9603791" data-uid="089a5491f1" data-format="inline" data-version="5"
+              data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false}},&quot;version&quot;:&quot;5&quot;}">
+          <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+          <div class="lea-form-row" data-element="fields" data-stacked="false">
+            <input class="lea-input formkit-input" name="email_address" aria-label="Email address" placeholder="Your email address" required type="email">
+            <button data-element="submit" class="btn btn-primary lea-submit">
+              <div class="formkit-spinner"><div></div><div></div><div></div></div>
+              <span>Receive Lea&rsquo;s letters</span>
+            </button>
+          </div>
+          <div class="formkit-powered-by-convertkit-container">
+            <a href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic" data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank" rel="nofollow noopener">Built with Kit</a>
+          </div>
+        </form>
         <p class="signup-fallback small">
-          Form not loading? <a href="https://nickypenttila.kit.com/fcd87c6b3b" target="_blank" rel="noopener">Sign up here instead &rarr;</a><br>
           No spam. Just story news, publication updates, and the occasional note from the writing desk.
         </p>
       </div>
@@ -82,7 +94,7 @@
         <div class="footer-signup">
           <h3 style="color:var(--cream);">Receive Lea&rsquo;s letters</h3>
           <p style="opacity:0.9;">New chapters, publication news, and the occasional bonus scene from the writing desk.</p>
-          <a class="btn btn-primary" href="https://nickypenttila.kit.com/fcd87c6b3b" target="_blank" rel="noopener">Join the list &rarr;</a>
+          <a class="btn btn-primary" href="#join">Join the list &rarr;</a>
         </div>
         <nav class="footer-nav" aria-label="Footer">
           <h3 style="color:var(--cream);">Explore</h3>
@@ -100,5 +112,7 @@
     </div>
   </footer>
 
+  <!-- Kit form handler: lets the signup submit in-place and show the success message -->
+  <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 </body>
 </html>
