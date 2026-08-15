@@ -8,10 +8,12 @@ No build step, no plugins, nothing to keep updated. Just HTML and one stylesheet
 | File | What it is |
 |------|------------|
 | `index.html` | Home page + main newsletter signup |
-| `by-smaller-proofs.html` | Book 1 page + first 4 chapters |
-| `a-proper-bloom.html` | Book 2 page + first 4 chapters |
-| `a-proper-choice.html` | Book 3 page + first 4 chapters |
+| `by-smaller-proofs.html` | Book 1 page + opening chapters |
+| `a-proper-bloom.html` | Book 2 page + Chapter One |
+| `a-proper-choice.html` | Book 3 page + Chapter One |
 | `about.html` | About Lea + headshot |
+| `404.html` | Friendly not-found page (Cloudflare serves it automatically) |
+| `favicon.*`, `apple-touch-icon.png` | Site icon (rose sprig) — linked from every page |
 | `css/style.css` | All colours, fonts, and layout (edit once, every page updates) |
 | `images/` | Drop covers + headshot here (see `images/README.txt`) |
 
@@ -72,15 +74,23 @@ paragraph wrapped in `<p>` ... `</p>` per paragraph. The fancy drop-cap and
 chapter spacing happen automatically. (Tip: if you'd rather not format it by
 hand, send me the chapters and I'll drop them in.)
 
-**Turn on a buy button when a store goes live**
-In a book page, find the `BUY BUTTONS` comment. For each retailer button:
-- replace `href="#"` with the real link, and
-- delete `btn-disabled` from the `class="..."`, and change the button text
-  from e.g. `Amazon — soon` to `Buy on Amazon`.
+**Turn a pre-order button into a buy button on launch day**
+Each book page has a `buy-row` near the top and a matching button in the
+end-of-sample "keep reading" block at the bottom — change both, plus the card
+on `index.html`. Three things to update per book on launch day:
+- `<p class="pub-status">Coming [date]</p>` → `Available now`
+- the `Out [date]` line in the keep-reading block → `Out now`
+- button text `Pre-order on Amazon` → `Read on Amazon` (link stays the same)
 
-For *By Smaller Proofs*, the Amazon link is already prepared in a comment:
-`https://www.amazon.com/dp/B0H6H898N9` — just paste it in once the Amazon
-page exists.
+**Current links**
+| Book | Status | Link |
+|------|--------|------|
+| By Smaller Proofs | Out now, wide | <https://books2read.com/by-smaller-proofs> |
+| A Proper Bloom | 18 Aug 2026, KU (Amazon only) | <https://amzn.to/4ga4e5H> |
+| A Proper Choice | 24 Aug 2026, KU (Amazon only) | <https://amzn.to/4g9xhot> |
+
+Books 2 and 3 are in Kindle Unlimited, so they get one Amazon button only —
+no other retailers until they leave KU.
 
 **Add a cover or your headshot**
 Put the image in the `images` folder using the exact name listed in
@@ -106,3 +116,18 @@ Kit's HTML embed).
 - The site reads as fan fiction inspired by Austen; the footer states this.
 - Book 1 (*By Smaller Proofs*) can stay free; per your funnel plan, keep Books 2
   & 3 to sample chapters only here, since they're going into Kindle Unlimited.
+
+### Bonus-scene pages (not in the site navigation)
+
+`courage/`, `gravel/`, `wedding/`, and `wedding-epilogue/` are standalone bonus
+scenes with their own PDFs. Nothing on the site links to them — they're meant to
+be handed out by newsletter link. `wedding-epilogue/` is set to `noindex`;
+`courage/` and `gravel/` are not, so search engines can find those two.
+
+### The site icon
+
+The little rose sprig in the browser tab is `favicon.svg` (plus `.ico` and PNG
+fallbacks) in the top folder. To change it, replace those files keeping the same
+names — the `<link rel="icon">` tags in each page's `<head>` point at them by
+name and don't need editing. `images/icon-512.png` is a large copy kept for
+social profiles or a press kit.

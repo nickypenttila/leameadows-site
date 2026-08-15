@@ -199,6 +199,8 @@ hr.rule { border: 0; border-top: 1px solid var(--gold); max-width: 80px; margin:
 }
 .book-card .cover, .book-card .cover-placeholder { width: 180px; margin-bottom: 1rem; }
 .book-card h3 { margin-bottom: 0.15em; }
+.book-card .pub-status { margin-bottom: 0.4rem; }
+.book-card .btn { margin-top: 0.5rem; width: 100%; max-width: 240px; }
 
 /* end-of-sample "keep reading" + next-in-series cross-sell */
 .keep-reading { max-width: 620px; margin: 0 auto 2.2rem; text-align: center; }
